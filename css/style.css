@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* To use: font-family: 'Poppins', sans-serif; */
+
+/*--------------GERAL--------------*/
+body {
+    height: 200vh;
+}
+
+/*--------------FUNDO OURO-----background: repeating-linear-gradient(-45deg, #C27F48, #f3c29a, #aa6328, #f3c29a, #C27F48);---------*/
+
+.btn-fundo-ouro {
+    background: none;
+    border: 3px solid #C27F48;
+    color: #C27F48;
+}
+
+.btn-fundo-ouro:hover {
+    background: #C27F48;
+    color: #fff;
+}
+
+.btn-fundo-azul {
+    background: #140138;
+    border: 3px solid #140138;
+    color: #fff;
+}
+
+.btn-fundo-azul:hover {
+    background: #270f53;
+    border: 3px solid #270f53;
+}
+
+/*--------------BARRA DO TOPO--------------*/
+
+.topbar {
+    width: 100%;
+    height: auto;
+    background: #140138;
+    text-align: center;
+}
+
+.topbar .redes-sociais {
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+.topbar .redes-sociais i {
+    font-size: 30px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.topbar .redes-sociais i:hover {
+    color: #C27F48;
+}
+
+
+.topbar p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 12px 0;
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/*--------------BARRA DE NAVEGAÇÃO--------------*/
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #140138; 
+}
+
+.navbar ul {
+    float: right;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.navbar ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #140138;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    color: #C27F48;
+}
+
+/*--------------HEADER--------------*/
+
+.header {
+    width: 100%;
+    height: auto;
+    background: url('../img/bg-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.header .content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    letter-spacing: .1em;
+    max-width: 480px;
+}
+
+.header .content p:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 20px 0;
+}
+
+.header .content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.btn {
+    display: block;
+    float: left;
+    width: auto;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 20px;
+    margin: 20px 20px 0 0;
+    border-radius: 10px;
+    min-width: 150px;
+    
+}
+
+
+
+
+
+
+
