@@ -1,0 +1,24 @@
+{
+  "name": "clinica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fforellee/Clinica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fforellee/Clinica/issues"
+  },
+  "homepage": "https://github.com/fforellee/Clinica#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

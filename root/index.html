@@ -6,6 +6,27 @@
         <title>Git hub page supremacy</title>
     </head>
     <body>
-        Git hub page supremacy<
+        Git hub page supremacy
+        <form action="/form" methode="post">
+            <input type="text" name="user[user]" id="teste">
+            <input type="text" name="user[email]" id="teste">
+            <input type="submit" value="submit">
+        </form>
+        <script>
+
+            fetch('/form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    user: {
+                        name: "John",
+                        email: "john@example.com"
+                    }
+                })
+            });
+
+       </script>
     </body>
 </html>
