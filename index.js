@@ -15,14 +15,6 @@ MongoClient.connect(url, function(err, db) {
   });
 }); 
 
-  dbo.collection("cidades").insert(
-    {
-    if (err) throw err;
-    console.log(result);
-    db.close();
-    }
-  );
-
 // app.use(express.urlencoded());
 // app.use(express.json());
 
