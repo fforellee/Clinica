@@ -1,32 +1,22 @@
 const express = require('express');
+// const expressLayouts = require('express-ejs-layouts')
+// Import blogrouter
+const blogrouter = require('./blogroutes');
+// Import database
+const MongoClient = require('./database.js')
 const app = express();
+
+// set port number 
 const port = 7000;
-const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/";
 
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("icaro");
-  var query = { cidades: "saopaulo" };
-  dbo.collection("cidades").find(query).toArray(function(err, result) {
-    if (err) throw err;
-    console.log(result);
-    db.close();
-  });
-}); 
+// set static files
+app.use(express.static(__dirname+"/root"));
+// set templating engine
+app.set('view engine','ejs');
+// set routes
+app.use('/',blogrouter);
 
-// app.use(express.urlencoded());
-// app.use(express.json());
-
-app.get('/index',(req,res)=>{
-    res.sendFile(__dirname+'/root/index.html')
-});
-
-app.post('/form',(req,res)=>{
-    console.log(req.body.user.name)
-    console.log(req.body.user.email)
-});
-            
+// set server 
 const server = app.listen(port, ()=>{
     console.log('running server at '+port);
 });
