@@ -1,3 +1,4 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 // const expressLayouts = require('express-ejs-layouts')
 // Import blogrouter
@@ -6,11 +7,12 @@ const blogrouter = require('./blogroutes');
 const MongoClient = require('./database.js')
 const app = express();
 
-// set port number 
+var urlEncodedParser = bodyParser.urlencoded({extended:false});
+//set port number
 const port = 7000;
 
 // set static files
-app.use(express.static(__dirname+"/root"));
+app.use(express.static(__dirname+"/views"));
 // set templating engine
 app.set('view engine','ejs');
 // set routes
