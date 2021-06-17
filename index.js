@@ -1,16 +1,18 @@
-const bodyParser = require('body-parser');
+const bodyparser = require('body-parser');
 const express = require('express');
-// const expressLayouts = require('express-ejs-layouts')
 // Import blogrouter
 const blogrouter = require('./blogroutes');
 // Import database
 const MongoClient = require('./database.js')
 const app = express();
 
-var urlEncodedParser = bodyParser.urlencoded({extended:false});
+// var urlEncodedParser = bodyparser.urlencoded({extended:false});
+
 //set port number
 const port = 7000;
-
+// set bodyparser
+app.use(bodyparser.urlencoded({extended:true}));
+app.use(bodyparser.json());
 // set static files
 app.use(express.static(__dirname+"/views"));
 // set templating engine
